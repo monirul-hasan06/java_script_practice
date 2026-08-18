@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello App</title>
+    <style>
+        #helloBtn{
+            background-color: rgba(44, 38, 38, 0.851);
+            color: rgb(199, 199, 203);
+        };
+        #nameInput{
+            background-color: bisque;
+            color:cornsilk;
+            text-color: rgb(182, 180, 27);
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="helloBtn">Say Hello</button>
+
+    <h2 id="greeting"></h2>
+
+    <script>
+    const helloBtn = document.getElementById("helloBtn");
+
+    helloBtn.addEventListener("click", function () {
+
+    const name = document.getElementById("nameInput").value;
+
+    document.getElementById("greeting").textContent =
+        `Hello, ${name || "User"}!`;
+
+});
+    </script>
+</body>
+</html>
